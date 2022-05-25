@@ -1,0 +1,31 @@
+{
+  "name": "parcel-project-template",
+  "version": "1.1.0",
+  "description": "",
+  "main": "index.js",
+  "homepage": "https://AndreyHerzhov.github.io/goit-js-hw-08",
+  "scripts": {
+    "dev": "parcel src/*.html",
+    "build": "parcel build src/*.html --public-url /parcel-project-template/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://AndreyHerzhov.github.io/goit-js-hw-08.git"
+  },
+  "keywords": [],
+  "author": "Andrey Herzhov <andreyherzhov@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://AndreyHerzhov.github.io/goit-js-hw-08/issues"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "parcel-plugin-handlebars-precompile": "^1.0.2",
+    "parcel-plugin-nuke-dist": "^1.0.1",
+    "posthtml-include": "^1.6.2",
+    "sass": "^1.32.8"
+  }
+}
+
+
+ 
