@@ -7,10 +7,9 @@ const refs = {
     textarea: document.querySelector('.feedback-form textarea')
 }
 
-const formData = {
-    email: '',
-    message: ''
-}
+const formData = {}
+
+
 
 
 refs.form.addEventListener('input', throttle(updateLocalStorage, 500))
@@ -30,20 +29,26 @@ function onButtonSubmit (evt) {
 function populateEmail() {
     const savedEmail = window.localStorage.getItem("feedback-form-state")
     const parsedEmail = JSON.parse(savedEmail)
-    if(parsedEmail) {
+    if(parsedEmail && Object.values(parsedEmail) !== []) {
         refs.email.value = parsedEmail.email
+        formData.email = parsedEmail.email;
    }   
     
 } 
+ 
 
 function populateMessage() {
     const savedMessage = window.localStorage.getItem("feedback-form-state")
     const parsedMessage = JSON.parse(savedMessage)
-    if(parsedMessage) {
+    if(parsedMessage && Object.values(parsedMessage) !== []) {
         refs.textarea.value = parsedMessage.message
+        formData.message = parsedMessage.message;
     }   
 }
+ 
 
 populateEmail()
 populateMessage()
 
+ 
+ console.log(formData)
