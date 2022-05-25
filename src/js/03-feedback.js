@@ -11,17 +11,14 @@ const formData = {
     email: '',
     message: ''
 }
-// console.log(refs.form)
-// console.log(refs.button)
-// console.log(refs.email)
-// console.log(refs.textarea)
+
 
 refs.form.addEventListener('input', throttle(updateLocalStorage, 500))
 refs.form.addEventListener('submit', onButtonSubmit)
 
 function updateLocalStorage (evt)  {
     formData[evt.target.name] = evt.target.value
-    window.localStorage.setItem("feedback-form-state", JSON.stringify(formData))
+    localStorage.setItem("feedback-form-state", JSON.stringify(formData))
 }
 
 function onButtonSubmit (evt) {
@@ -35,7 +32,8 @@ function populateEmail() {
     const parsedEmail = JSON.parse(savedEmail)
     if(parsedEmail) {
         refs.email.value = parsedEmail.email
-   }  
+   }   
+    
 } 
 
 function populateMessage() {
@@ -48,3 +46,4 @@ function populateMessage() {
 
 populateEmail()
 populateMessage()
+
