@@ -3,20 +3,20 @@
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://andreyherzhov.github.io/goit-js-hw-08/",
+  "homepage": "https://andreyherzhov.github.io/goit-js-hw-08",
   "scripts": {
     "dev": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /goit-js-hw-08/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://andreyherzhov.github.io/goit-js-hw-08/.git"
+    "url": "git+https://andreyherzhov.github.io/goit-js-hw-08.git"
   },
   "keywords": [],
   "author": "Andrey Herzhov <andreyherzhov@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://andreyherzhov.github.io/goit-js-hw-08//issues"
+    "url": "https://andreyherzhov.github.io/goit-js-hw-08/issues"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.5",
