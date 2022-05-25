@@ -7,7 +7,10 @@ const refs = {
     textarea: document.querySelector('.feedback-form textarea')
 }
 
-const formData = {}
+const formData = {
+    email: '',
+    message: ''
+}
 
 
 
@@ -23,7 +26,9 @@ function updateLocalStorage (evt)  {
 function onButtonSubmit (evt) {
     evt.preventDefault();
     evt.currentTarget.reset()
-    localStorage.removeItem("feedback-form-state")
+    localStorage.removeItem("feedback-form-state");
+    formData.email = '';
+    formData.message = '';
 }
 
 function populateEmail() {
