@@ -27,6 +27,7 @@ function onButtonSubmit (evt) {
     evt.preventDefault();
     evt.currentTarget.reset()
     localStorage.removeItem("feedback-form-state");
+    console.log(formData)
     formData.email = '';
     formData.message = '';
 }
@@ -56,4 +57,3 @@ populateEmail()
 populateMessage()
 
  
- console.log(formData)
